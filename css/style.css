@@ -1,0 +1,121 @@
+body{
+    background-color: #d9e4ff;
+    color: black;
+}
+
+h2{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Comic Sans MS';
+    color: black;
+}
+
+h3{
+    font-size: x-large;
+    font-family: 'Comic Sans MS';
+    color: black;
+}
+
+nav {
+    text-align: center;
+}
+
+p{
+    line-height: 2;
+}
+
+ul {
+    line-height: 2;
+}
+
+ol {
+    line-height: 2;
+}
+
+img, video{
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.grid-travel img {
+    height: 125px;
+}
+
+.grid-pets img, .grid-pets video {
+    height: 200px;
+    width: 170px;
+}
+
+figure {
+    text-align: center;
+    padding: 10px;
+}
+
+#main {
+    text-align: center;
+}
+
+#skip{
+    text-transform: uppercase;
+}
+
+#skip{
+    position: absolute;
+    left: -500px;
+}
+
+#skip:focus{
+    left: 200px;
+}
+
+
+nav a.active {
+    font-size: large;
+    font-weight: bold;
+    background-color:aquamarine;
+}
+
+nav li{
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@keyframes enlarge {
+    from {transform: scale(1.0);}
+    to {transform: scale(1.1);}
+}
+
+img:hover, video:hover {
+    transform: scale(1.1);
+    animation: enlarge 1s;
+}
+
+.grid-travel, .grid-pets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.last-element {
+    justify-self: center;
+    grid-column: span 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    img, video, video:hover, img:hover {
+        animation: none;
+        transform: none;
+    }
+
+    .gif {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: aquamarine;
+    }
+}
